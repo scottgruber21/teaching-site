@@ -1,0 +1,28 @@
+---
+import Layout from '../layouts/Layout.astro';
+import SatelliteSlider from '../components/SatelliteSlider.svelte';
+import TeacherVoice from '../components/TeacherVoice.astro';
+
+// IMPORT your images here
+import nightImg from '../assets/korea-night.jpg';
+import mapImg from '../assets/korea-map.jpg';
+
+const title = "The Unfinished War";
+---
+
+<Layout title={title}>
+  <main class="max-w-5xl mx-auto py-20 px-6">
+    <section 
+      class="mb-20" 
+      data-insight="I always start here. This nighttime satellite image forces students to realize that the 'unfinished' status of the war has physical, visible consequences today."
+    >
+      <SatelliteSlider 
+        client:load 
+        nightImage={nightImg.src} 
+        mapImage={mapImg.src} 
+      />
+    </section>
+
+    <TeacherVoice />
+  </main>
+</Layout>

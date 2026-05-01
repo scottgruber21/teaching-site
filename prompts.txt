@@ -1,0 +1,86 @@
+PROJECT PROMPT
+
+Anchor Prompt: The Overall Vision
+Context: We are building a professional teaching portfolio for Scott Gruber, a Social Studies educator with a background in journalism, digital marketing, and Korean language studies (TOPIK 4).
+
+The Goal: To prove "Classroom Agility" and "Pedagogical DNA" to school administrators through a high-end Ed Tech experience. This is not a static resume; it is a functional demonstration of teaching capability.
+
+Technical Stack: > * Astro 6 (using the new Content Layer/Loaders).
+
+Svelte for high-interactivity components (e.g., the Satellite Slider).
+
+Tailwind CSS for a "boutique and human" aesthetic.
+
+Core Features to Maintain:
+
+"The Unfinished War" Lesson: A guided discovery on the Korean War using primary sources.
+
+The "Teacher’s Voice" Scaffold: A persistent anime-avatar bubble that provides pedagogical context via scroll-triggered insights.
+
+Interactive Evidence: A "Diplomat’s Desk" exit ticket and "Evidence Hunt" artifacts.
+
+Professional Narrative: Framing non-traditional experience (journalism/marketing/subbing) as an asset for modern, evidence-based Social Studies instruction.
+
+Stylistic Guardrails: Avoid "AI-generated" markers like excessive semicolons or the phrase "at the intersection of." Keep the tone human, engaging, and benefit-focused for students and administrators alike.
+
+
+KOREAN WAR LESSON
+
+Anchor Prompt: The "Unfinished War" Lesson
+Context: We are building the "Unfinished War" interactive lesson, the centerpiece of Scott Gruber's teaching portfolio. This module acts as a digital alternative to a traditional classroom presentation, designed for 9th-grade World History.
+
+Pedagogical Objective: Students (and viewing administrators) must understand that the Korean War's lack of a formal peace treaty directly created the modern geopolitical landscape.
+
+The Narrative Arc (Sourced from Lesson Plan):
+
+The Hook (Satellite Slider): Comparing 1953 nighttime imagery ("Line of Light") with modern political borders.
+
+The "Why" (Policy): Explaining "Containment" as the driver for US involvement.
+
+The Grinding Stalemate: Visualizing the shift from 1950 movement to 1951-53 trench warfare.
+
+The "Aha!" Moment (Armistice vs. Treaty): Defining the Armistice as a "Pause Button" rather than a "Stop Button."
+
+The Legacy (Evidence Hunt): Interactive cards showcasing the "Miracle on the Han River" (SK) vs. "Centralized Dictatorship/Nuclear Program" (NK).
+
+The Closure (Diplomat’s Desk): A text-based exit ticket for "proposing a peace treaty."
+
+Interactive Features:
+
+Svelte Components: Must be used for the Satellite Slider and Evidence Hunt to ensure reactivity.
+
+Teacher’s Voice (Anime Avatar): A persistent scaffold that updates via scroll-trigger, providing "Teacher-Talk" context and pedagogical rationale (e.g., "I start here because...").
+
+Content Source of Truth: All historical facts and framing must align with the provided Korean War Lesson Plan.docx and Korean War Handout.
+
+UX Priority: The experience must be "Guided Discovery." It shouldn't feel like a textbook; it should feel like an investigation. High-contrast "Ed Tech" visuals, rounded UI, and a clear "Skip" button for administrators are mandatory.
+
+
+PROFESSIONAL BIO
+
+
+Anchor Prompt: Professional Narrative & Bio
+Context: We are crafting the professional narrative for Scott Gruber, a Social Studies educator. The goal is to frame his non-traditional career path as a premium asset for a modern school district.
+
+The Core Narrative: Scott is not just a teacher; he is a journalist and digital marketing specialist who brings real-world information literacy into the classroom. He doesn't just teach history; he teaches students how to verify it.
+
+Key Value Pillars (The "Transferable Authority"):
+
+Journalism & Political Science (Rutgers): Frame this as the "Investigative Edge." Scott trains students to be Information Detectives—prioritizing primary source verification, identifying bias, and questioning narratives.
+
+Digital Marketing & Analytics (Pillar Systems Group): Frame this as Attention Management. Scott understands how modern media works. He uses this expertise to make complex historical topics as engaging as the digital content students consume daily.
+
+Substitute Teaching (Manville & Hillsborough): Frame this as Classroom Agility. Having walked into countless diverse classrooms with zero lead time, Scott has mastered the art of instant rapport-building and high-level classroom management.
+
+Global Specialization (Korean Studies): Highlighting his pursuit of TOPIK Level 4 proficiency. This provides a rare specialization in East Asian history and demonstrates "learner’s empathy"—the ability to relate to students' struggles because he is also a student of a complex subject.
+
+Interests & Personality: > * Incorporate a "Human" layer: Scott is a cat person, a fan of Norse mythology, and a listener of Korean Trot and K-pop. These details should be used to build a "boutique and human" connection with students and colleagues.
+
+Tone & Stylistic Guardrails: > * Voice: Authentic, grounded, and supportive.
+
+Avoid AI markers: No semicolons, no em dashes, and absolutely no phrases like "at the intersection of."
+
+Philosophy: Avoid "educational buzzword soup." Use direct, benefit-focused language that shows a commitment to evidence-based learning and student growth.
+
+Hiring Objective: To convince a Principal or Department Head that Scott's technical skills and diverse life experience make him more prepared for a 21st-century classroom than a candidate with a traditional, linear background.
+
