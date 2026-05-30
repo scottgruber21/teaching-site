@@ -1,14 +1,43 @@
+---
+import { Image } from 'astro:assets';
+// Ensure this path exactly matches where you saved the avatar!
+import avatarImg from '../assets/avatar-anime.png'; 
+---
+
+<div 
+  id="teacher-bubble" 
+  class="fixed bottom-8 right-8 max-w-sm w-full z-50 flex items-end gap-4 opacity-0 translate-y-4 transition-all duration-500 ease-out pointer-events-none"
+>
+  <div class="bg-white text-slate-800 text-sm p-5 rounded-2xl rounded-br-none shadow-2xl border border-slate-200 relative pointer-events-auto">
+    <span class="inline-block bg-blue-100 text-blue-800 text-[10px] font-black uppercase tracking-widest px-2 py-0.5 rounded mb-2">
+      Pedagogical Insight
+    </span>
+    <p id="teacher-text" class="leading-relaxed font-medium">...</p>
+    
+    <div class="absolute -right-2 bottom-0 w-4 h-4 bg-white border-r border-b border-slate-200 transform rotate-45 translate-y-[-10px]"></div>
+  </div>
+
+  <div class="w-16 h-16 shrink-0 rounded-full border-4 border-white shadow-xl overflow-hidden bg-blue-50 pointer-events-auto">
+    <Image 
+      src={avatarImg} 
+      alt="Scott Gruber - Teacher Insight" 
+      class="w-full h-full object-cover" 
+    />
+  </div>
+</div>
+
 <script>
-  const bubble = document.getElementById('teacher-bubble');
-  const textContainer = document.getElementById('teacher-text');
-  
-  // Guard Clause: Exit if the elements don't exist
-  if (!bubble || !textContainer) {
-    console.warn("TeacherVoice elements not found in the DOM.");
-  } else {
+  // Wait for the DOM to be fully loaded
+  document.addEventListener('DOMContentLoaded', () => {
+    const bubble = document.getElementById('teacher-bubble');
+    const textContainer = document.getElementById('teacher-text');
+    
+    if (!bubble || !textContainer) return;
+
+    // Trigger when a section is at least 40% visible
     const observerOptions = { 
-      threshold: 0.5,
-      rootMargin: "0px 0px -20% 0px" // Trigger slightly before it hits center
+      threshold: 0.4,
+      rootMargin: "0px 0px -20% 0px" 
     };
     
     const observer = new IntersectionObserver((entries) => {
@@ -16,19 +45,21 @@
         if (entry.isIntersecting) {
           const newText = entry.target.getAttribute('data-insight');
           
-          if (newText && bubble && textContainer) {
-            // Update classes for the reveal animation
+          if (newText) {
+            // Update the text
+            textContainer.innerText = newText;
+            
+            // Ensure the bubble is visible
             bubble.classList.remove('opacity-0', 'translate-y-4');
             bubble.classList.add('opacity-100', 'translate-y-0');
-            
-            // Swap the text
-            textContainer.innerText = newText;
           }
         }
       });
     }, observerOptions);
 
-    // Watch all elements with the 'data-insight' attribute
-    document.querySelectorAll('[data-insight]').forEach(section => observer.observe(section));
-  }
+    // Attach observer to every section with the attribute
+    document.querySelectorAll('[data-insight]').forEach(section => {
+      observer.observe(section);
+    });
+  });
 </script>
