@@ -2,7 +2,7 @@
 import Layout from '../layouts/Layout.astro';
 import SatelliteSlider from '../components/SatelliteSlider.svelte';
 import TeacherVoice from '../components/TeacherVoice.astro';
-
+import EvidenceHunt from '../components/EvidenceHunt.svelte';
 // Image Imports
 import nightImg from '../assets/korea-night.jpg';
 import mapImg from '../assets/korea-map.jpg';
@@ -221,6 +221,20 @@ const title = "The Unfinished War";
           </p>
         </div>
       </div>
+    </section>
+    <section 
+      id="section-evidence"
+      class="mb-32 scroll-mt-24" 
+      data-insight="Instead of lecturing about the stark differences between the two nations, I have students actively sort and investigate the data points as evidence. This interactive dashboard forces them to connect modern geopolitical status directly back to the constraints of the 1953 pause button."
+    >
+      <div class="mb-12 text-center">
+        <h2 class="text-3xl font-bold text-slate-900 mb-4">The Legacy of the Pause Button</h2>
+        <p class="text-slate-600 max-w-2xl mx-auto">
+          The 1953 armistice stopped full-scale combat but left the underlying political division completely unresolved. Explore the evidence cards below to discover how this frozen state of war shaped two completely opposite societies.
+        </p>
+      </div>
+
+      <EvidenceHunt client:load />
     </section>
 
     <TeacherVoice />
